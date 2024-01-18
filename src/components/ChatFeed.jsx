@@ -1,11 +1,15 @@
+import React, { useEffect, useRef, useState } from 'react';
 import MyMessage from './MyMessage';
 import TheirMessage from './TheirMessage';
 import MessageForm from './MessageForm';
 
+
 const ChatFeed = (props) => {
   const { chats, activeChat, userName, messages } = props;
+  
 
   const chat = chats && chats[activeChat];
+  const chatFeedRef = useRef(null);
 
   const renderReadReceipts = (message, isMyMessage) => {
     return chat.people.map((person, index) => person.last_read === message.id && (
@@ -19,6 +23,16 @@ const ChatFeed = (props) => {
       />
     ))
   }
+
+  const scrollToBottom = () => {
+    if (chatFeedRef.current) {
+      chatFeedRef.current.scrollTop = chatFeedRef.current.scrollHeight;
+    }
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const renderMessages = () => {
     const keys = Object.keys(messages);
@@ -46,7 +60,7 @@ const ChatFeed = (props) => {
   if (!chat) return <div />;
 
   return (
-    <div className="chat-feed">
+    <div className="chat-feed" ref={chatFeedRef}>
       <div className="chat-title-container">
         <div className="chat-title">{chat?.title}</div>
         <div className="chat-subtitle">

@@ -8,17 +8,19 @@
 
 .ce-chat-list {
   background-color: rgb(240, 240, 240) !important;
+  width: 100%;
 }
 
 .ce-chats-container {
   background-color: rgb(240, 240, 240) !important;
-
+  width: 100%;
 }
 
 .ce-active-chat-card {
   background-color: #19b0e279 !important;
   border: 4px solid #2b4ad500 !important;
   border-radius: 0px !important;
+  width: 100%;
 }
 
 .ce-chat-subtitle-text {
@@ -26,7 +28,7 @@
 }
 
 .ce-chat-form-container {
-  padding-bottom: 2.5em !important;
+  padding: 2em !important;
 }
 
 .ce-text-input {
@@ -70,6 +72,13 @@
 }
 
 /* CUSTOM FEED */
+#light {
+  background-color: white;
+}
+
+#dark {
+  background-color: #000000;
+}
 
 .chat-feed {
   height: 100%;
@@ -79,7 +88,7 @@
 }
 
 .chat-title-container {
-  width: calc(100% - 36px);
+  width: 100%;
   padding: 18px;
   text-align: center;
 }
@@ -164,6 +173,9 @@
 }
 
 .message-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   overflow: hidden;
   border-radius: 6px;
   border: 2px solid #2B49D5;
@@ -182,7 +194,6 @@
 
 .image-button {
   cursor: pointer;
-  padding: 0px 25px;
   height: 100%;
 
 }
@@ -205,6 +216,7 @@
 
 .picture-icon {
   top: 1px;
+  padding-top: 0.8em;
   position: relative;
   font-size: 14px;
   scale: 1.5;
@@ -254,7 +266,7 @@
 .title {
   margin-bottom: 10px;
   width: 100%;
-  font-size: 2.3em;;
+  font-size: 2.3em;
 }
 
 .button {
