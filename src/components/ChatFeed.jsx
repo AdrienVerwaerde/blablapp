@@ -4,9 +4,9 @@ import TheirMessage from './TheirMessage';
 import MessageForm from './MessageForm';
 
 
-const ChatFeed = (props) => {
+
+function ChatFeed(props) {
   const { chats, activeChat, userName, messages } = props;
-  
 
   const chat = chats && chats[activeChat];
   const chatFeedRef = useRef(null);
@@ -57,9 +57,10 @@ const ChatFeed = (props) => {
     });
   };
 
-  if (!chat) return <div />;
+  if (!chat) return;
 
   return (
+    
     <div className="chat-feed" ref={chatFeedRef}>
       <div className="chat-title-container">
         <div className="chat-title">{chat?.title}</div>
@@ -78,6 +79,7 @@ const ChatFeed = (props) => {
         <MessageForm {...props} chatId={activeChat} />
       </div>
     </div>
+    
   );
 };
 

@@ -7,14 +7,15 @@
 }
 
 .ce-chat-list {
-  background-color: rgb(240, 240, 240) !important;
+  background-color: rgb(255, 255, 255);
   width: 100%;
 }
 
 .ce-chats-container {
-  background-color: rgb(240, 240, 240) !important;
+  background-color: rgb(255, 255, 255);
   width: 100%;
 }
+
 
 .ce-active-chat-card {
   background-color: #19b0e279 !important;
@@ -28,7 +29,7 @@
 }
 
 .ce-chat-form-container {
-  padding: 2em !important;
+  padding: 2em;
 }
 
 .ce-text-input {
@@ -71,14 +72,60 @@
   display: none !important;
 }
 
-/* CUSTOM FEED */
-#light {
-  background-color: white;
+
+/* DARKMODE */
+
+.dark {
+  background-color: #00032a;
+
 }
 
-#dark {
-  background-color: #000000;
+.dark .chat-feed {
+  background-color: #00032a;
 }
+
+.dark .ce-chat-feed-column {
+  background-color: #00032a;
+}
+
+.dark .ce-chats-container {
+  background-color: #00032a;
+}
+
+.dark .ce-chat-form-container {
+  background-color: #00032a;
+
+}
+
+.dark .message-form-container {
+  background-color: #00032a;
+}
+
+.dark .message-form {
+  background-color: #2B49D5;
+}
+
+.dark .message-input {
+  background-color: #2B49D5;
+  border: none;
+  color: white;
+}
+
+.dark .message-input::placeholder{
+  color: #ffffff;
+}
+
+.dark .send-button {
+  background-color: #2B49D5;
+  border: none;
+}
+
+.dark .ce-chat-list {
+  background-color: #00032a;
+}
+
+
+/* CUSTOM FEED */
 
 .chat-feed {
   height: 100%;
@@ -98,6 +145,7 @@
   font-weight: 800;
   font-size: 24px;
 }
+
 
 .chat-subtitle {
   color: #2CA2DA;
