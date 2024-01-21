@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import MyMessage from './MyMessage';
 import TheirMessage from './TheirMessage';
 import MessageForm from './MessageForm';
+import { ScrollDownBar } from 'react-chat-engine';
 
 
 

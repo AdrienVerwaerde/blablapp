@@ -28,6 +28,7 @@ const App = () => {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className={`app-full ${theme}`}>
+      <ReactSwitch onChange={toggleTheme} checked={theme === 'dark'} />
         <ChatEngine
           height="100vh"
           projectID={projectID}
@@ -36,9 +37,7 @@ const App = () => {
           renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
           onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()}
         />
-        <div className="switch">
-        <label>{theme === 'light' ? 'Light Mode' : 'Dark Mode'}</label>
-        <ReactSwitch onChange={toggleTheme} checked={theme === 'dark'} />
+        <div className="switch">  
       </div>
       </div>
     </ThemeContext.Provider>
