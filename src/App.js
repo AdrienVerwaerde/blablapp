@@ -5,7 +5,7 @@ import { createContext, useEffect, useState } from 'react';
 import ChatFeed from './components/ChatFeed';
 import LoginForm from './components/LoginForm';
 import './App.css';
-import ReactSwitch from 'react-switch';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 export const ThemeContext = createContext(null);
 
@@ -28,7 +28,7 @@ const App = () => {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className={`app-full ${theme}`}>
-      <ReactSwitch onChange={toggleTheme} checked={theme === 'dark'} />
+      <DarkModeSwitch className='dark-button' onChange={toggleTheme} checked={theme === 'dark'} />
         <ChatEngine
           height="100vh"
           projectID={projectID}

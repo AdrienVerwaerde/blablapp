@@ -37,7 +37,11 @@
 .ce-chat-form-container {
   display: flex;
   justify-content: space-around;
-  padding: 2em !important;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em !important;
+  margin-bottom: 1em;
+  margin-top: 2em;
 }
 
 
@@ -49,8 +53,8 @@
 .ce-primary-button {
   border-radius: 6px !important;
   background-color: #2B49D5 !important;
-  position: relative;
   bottom: 1px;
+
 }
 
 .ce-danger-button {
@@ -80,14 +84,23 @@
   
 }
 
+.ce-chat-form-container > div {
+  width: 100%;
+}
+
 .ce-chat-avatars-row {
   display: none !important;
 }
 
-.switch {
-  display: flex;
-  align-items: center;
+.dark-button {
+  position: absolute;
+  z-index: 1000;
+  top: 0.5em;
+  left: 0.8em;
+  
 }
+
+
 
 /* DARKMODE */
 
